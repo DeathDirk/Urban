@@ -4,20 +4,22 @@ class House:
         self.number_of_floors = number_of_floors
 
     def go_to(self, new_floor):
-        for i in range(1, new_floor):
-            1 <= new_floor <= self.number_of_floors else print('Такого этажа не существует')
+        for i in range(1, new_floor + 1):
+            # print(i) if 1 <= new_floor <= self.number_of_floors else print('Такого этажа не существует')
+            # как сюда правильно break интегрировать? чтобы после первой цифры не заканчивалось?
+
+            if 1 <= new_floor <= self.number_of_floors:
+                print(i)
+
+            else:
+                print('Такого этажа не существует')
+                break
+
 
 h1 = House('ЖК Горский', 18)
 h2 = House('Домик в деревне', 2)
 h1.go_to(5)
 h2.go_to(10)
-
-
-
-
-
-
-
 
 # Реализуйте класс House, объекты которого будут создаваться следующим образом:
 # House('ЖК Эльбрус', 30)
